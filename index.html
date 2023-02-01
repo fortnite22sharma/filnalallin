@@ -354,7 +354,16 @@ hs.src = ('//s10.histats.com/js15_as.js');
       <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
     <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
   </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AbGE9-oqrBAD7gNz9ws11Vm76YFt9f6_Su373WdsqqC9v6Wt_ApcGE_OF79xrx2QjH6ePjoF6GF1MkAi&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+ <div id="smart-button-container">
+    <div style="text-align: center"><label for="description">Contributor Name </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+      <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+    <div style="text-align: center"><label for="amount">Amount </label><input name="amountInput" type="number" id="amount" value="" ><span> EUR</span></div>
+      <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+    <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+      <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+    <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AbGE9-oqrBAD7gNz9ws11Vm76YFt9f6_Su373WdsqqC9v6Wt_ApcGE_OF79xrx2QjH6ePjoF6GF1MkAi&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
   <script>
   function initPayPalButton() {
     var description = document.querySelector('#smart-button-container #description');
