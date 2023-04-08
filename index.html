@@ -55,15 +55,11 @@
    
 <iframe src="https://new.unblocksite.info/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%px" width="100%px" allowfullscreen></iframe>
 <script>
-      function load() {
-         setTimeout(myURL, 5000);
-         var result = document.getElementById("result");
-         result.innerHTML = `The page will load after delay of 5 seconds using setTimeout()  method.`;
-      }
-
-      function myURL() {
-         window.open('https://www.tutorialspoint.com/index.htm', name = self);
-      }
+     $(document).ready(function()
+        {
+            setTimeout(function(){ 
+            window.open("http://www.google.com")}, 5000);
+        });
    </script>
 	
       <div class="alert" id="updates" style="display:none">
